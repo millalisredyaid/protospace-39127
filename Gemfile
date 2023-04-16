@@ -64,4 +64,4 @@ end
 
 # ターミナル
 1
-% bundle install
+bundle install
