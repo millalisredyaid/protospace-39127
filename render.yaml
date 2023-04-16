@@ -1,0 +1,21 @@
+databases:
+  - name: protospace-39127
+    databaseName: protospace-39127_db
+    user: protospace-39127
+    region: singapore
+
+services:
+  - type: web
+    name: protospace-39127
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: protospace-39127
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false

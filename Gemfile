@@ -6,7 +6,7 @@ ruby '2.6.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4'
+# 一度コメントアウトgem 'mysql2', '>= 0.4.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+  gem 'mysql2', '>= 0.4.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -59,5 +60,5 @@ gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 
 group :production do
-  gem 'pg'
+  gem "pg", "~> 1.4"
 end
