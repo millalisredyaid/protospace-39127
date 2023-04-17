@@ -18,6 +18,6 @@ module Protospace39127
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-    config.hosts << 'xxx.onrender.com'
+    config.hosts << 'protospace-39127.onrender.com'
   end
 end
